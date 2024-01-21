@@ -1,6 +1,6 @@
 import os
 
-restaurantes = ['Lazis','sushiTown']
+restaurantes = ['Lazis',None,'sushiTown',None]
 
 def exibir_nome_do_programa():
     print("""
@@ -37,7 +37,10 @@ def listar_restaurantes():
     exibir_subtitulo('Listar restaurantes')
     
     for restaurante in restaurantes:
-        print(f'- {restaurante}')
+        if restaurante:
+            print(f'- {restaurante}')
+        else:
+            print(f'- !Restaurante não disponível!')
     
     voltar_ao_menu_principal()
       
